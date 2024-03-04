@@ -1,0 +1,28 @@
+{
+    "name": "justbetter/statamic-openreplay",
+    "description": "OpenReplay integration for Statamic",
+    "authors": [
+        {
+            "name": "Kevin Meijer",
+            "email": "kevin@justbetter.nl",
+            "homepage": "https://justbetter.nl",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JustBetter\\StatamicOpenreplay\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Openreplay",
+            "description": "Statamic Openreplay addon"
+        },
+        "laravel": {
+            "providers": [
+                "JustBetter\\StatamicOpenreplay\\ServiceProvider"
+            ]
+        }
+    }
+}
