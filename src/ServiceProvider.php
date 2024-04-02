@@ -23,6 +23,22 @@ class ServiceProvider extends AddonServiceProvider
         return $this;
     }
 
+    public function bootPublishables() : self
+    {
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'justbetter-openreplay');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/vendor/justbetter-openreplay'),
+        ], 'views');
+
+        $this->publishes([
+            __DIR__.'/../config/justbetter-openreplay.php' => config_path('justbetter-openreplay.php'),
+        ], 'config');
+
+        return $this;
+    }
+
     public function bootViews() : self
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'justbetter-openreplay');
